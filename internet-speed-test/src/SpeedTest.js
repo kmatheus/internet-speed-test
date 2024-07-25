@@ -7,7 +7,8 @@ const SpeedTest = () => {
 
   const measureSpeed = async () => {
     setLoading(true);
-    setError(null);
+    setSpeedData(null); // Limpar os dados anteriores
+    setError(null);     // Limpar erros anteriores
     try {
       const response = await fetch('/speedtest');
       if (!response.ok) {
@@ -28,6 +29,7 @@ const SpeedTest = () => {
       <button onClick={measureSpeed} disabled={loading}>
         {loading ? 'Medindo...' : 'Medir Velocidade'}
       </button>
+      {loading && <p>Realizando a medição! Por favor, aguarde uns instantes...</p>} {/* Texto de carregamento */}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {speedData && (
         <div>
