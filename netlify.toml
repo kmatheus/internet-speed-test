@@ -1,7 +1,7 @@
 [build]
-  base = "frontend"  # Diretório base onde está o package.json
+  base = "frontend"
   command = "npm run build"
-  publish = "frontend/build"  # Diretório onde o build será gerado
+  publish = "build"
 
 [[redirects]]
   from = "/speedtest"
