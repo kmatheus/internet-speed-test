@@ -1,0 +1,3 @@
+[submodule "frontend/internet-speed-test"]
+    path = frontend/internet-speed-test
+    url = https://github.com/kmatheus/internet-speed-test.git
