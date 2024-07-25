@@ -7,8 +7,7 @@ const SpeedTest = () => {
 
   const measureSpeed = async () => {
     setLoading(true);
-    setSpeedData(null); // Limpar os dados anteriores
-    setError(null);     // Limpar erros anteriores
+    setError(null);
     try {
       const response = await fetch('/speedtest');
       if (!response.ok) {
@@ -17,11 +16,12 @@ const SpeedTest = () => {
       const data = await response.json();
       setSpeedData(data);
     } catch (error) {
-      setError(error.message);
+      setError('Erro ao medir a velocidade da internet: ' + error.message);
     } finally {
       setLoading(false);
     }
   };
+  
 
   return (
     <div>

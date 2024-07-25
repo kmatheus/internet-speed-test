@@ -5,5 +5,5 @@
 
 [[redirects]]
   from = "/speedtest"
-  to = "http://localhost:5000/speedtest"
+  to = "/.netlify/functions/speedtest"
   status = 200
